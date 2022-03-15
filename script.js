@@ -17,7 +17,11 @@ if (location.search.includes("no-title")) {
     // Create obsidian-style links
     document
       .querySelectorAll("span.link")
-      .forEach((el) => (el.innerText = `[[${el.innerText}]]`));
+      .forEach(
+        (el) =>
+          !el.innerText.startsWith("[[") &&
+          (el.innerText = `[[${el.innerText}]]`)
+      );
   });
 })();
 
