@@ -42,11 +42,3 @@ strong {
   font-variant: small-caps;
   color: #936c8a;
 }
-
-.link::before {
-  content: '[[';
-}
-
-.link::after {
-  content: ']]';
-}

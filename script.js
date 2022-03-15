@@ -12,9 +12,12 @@ if (location.search.includes("no-title")) {
       .forEach((el) => (el.style.display = showLocks ? "none" : ""));
     showLocks = !showLocks;
   });
+
+  document.getElementById("formatLinks").addEventListener("click", () => {
+    // Create obsidian-style links
+    document
+      .querySelectorAll("span.link")
+      .forEach((el) => (el.innerText = `[[${el.innerText}]]`));
+  });
 })();
 
-// Create obsidian-style links
-document
-  .querySelectorAll("span.link")
-  .forEach((el) => (el.innerText = `[[${el.innerText}]]`));
