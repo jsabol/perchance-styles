@@ -1,7 +1,7 @@
 // if ?no-title is in url, don't show title
-document
-  .getElementById("output-container")
-  .classList.add(location.search.includes("no-title") ? "no-title" : "");
+if (location.search.includes("no-title")) {
+  document.getElementById("output-container").classList.add("no-title");
+}
 
 (() => {
   let showLocks = true;
@@ -13,3 +13,8 @@ document
     showLocks = !showLocks;
   });
 })();
+
+// Create obsidian-style links
+document
+  .querySelectorAll("span.link")
+  .forEach((el) => (el.innerText = `[[${el.innerText}]]`));

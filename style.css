@@ -37,3 +37,16 @@ b {
 strong {
   font-weight: 900;
 }
+
+.link {
+  font-variant: small-caps;
+  color: #936c8a;
+}
+
+.link::before {
+  content: '[[';
+}
+
+.link::after {
+  content: ']]';
+}
